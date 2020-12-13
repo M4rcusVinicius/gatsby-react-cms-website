@@ -14,7 +14,7 @@ const IndexPage = () => (
         </Link>
       </li>
       <li>
-        <Link to="/about" activeStyle={{ color: "red" }}>
+        <Link to="/sobre" activeStyle={{ color: "red" }}>
           About (Gatsby Link)
         </Link>
       </li>

@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const AboutPage = () => (
-  <>
+  <Layout>
     <SEO title="Sobre" />
     <h1>About Page</h1>
     <ul>
@@ -13,12 +14,12 @@ const AboutPage = () => (
         </Link>
       </li>
       <li>
-        <Link to="/about" activeStyle={{ color: "red" }}>
+        <Link to="/sobre" activeStyle={{ color: "red" }}>
           About (Gatsby Link)
         </Link>
       </li>
     </ul>
-  </>
+  </Layout>
 )
 
 export default AboutPage

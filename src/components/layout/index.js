@@ -1,9 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Logo from "../Logo"
 
 const Layout = ({ children }) => {
   return (
-    <main>{children}</main>
+    <>
+      <Logo />
+      <main>{children}</main>
+    </>
   )
 }
 
