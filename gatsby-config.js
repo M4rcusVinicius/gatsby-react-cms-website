@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Simplesmente Estudante: Trabalhos, redações e resumos para ensino fundamental e médio`,
+    title: `Simplesmente Estudante`,
     description: `Este é um site onde qualquer aluno pode postar seu trabalho, redação ou resumo para contribuir com outros estudantes do encino fundamental e medio, alem de poder ler ous trabalhos, resumos e redações dos outros alunos que ja publicaram, dessa forma todos podem estudar juntos !`,
     author: `Marcus Vinicius Almeida Pires`,
+    company: `Maquina do Mundo`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
