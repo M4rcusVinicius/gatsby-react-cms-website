@@ -2,12 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import Logo from "../Logo"
 
+import * as S from "./styled"
+import GlobalStyles from "../../styles/global"
+
 const Layout = ({ children }) => {
   return (
-    <>
+    <S.LayoutWrapper>
+      <GlobalStyles />
       <Logo />
-      <main>{children}</main>
-    </>
+      <S.LayoutMain>{children}</S.LayoutMain>
+    </S.LayoutWrapper>
   )
 }
 
