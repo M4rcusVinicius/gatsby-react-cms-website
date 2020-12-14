@@ -2,11 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import * as S from "./styled"
 
-const Avatar = () => {
-  const { avatarImage } = useStaticQuery(
+const LogoImage = () => {
+  const { logoImage } = useStaticQuery(
     graphql`
       query {
-        avatarImage: file(relativePath: { eq: "logo.png" }) {
+        logoImage: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fluid(maxWidth: 500, quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -17,7 +17,7 @@ const Avatar = () => {
     `
   )
 
-  return <S.AvatarWrapper fluid={avatarImage.childImageSharp.fluid} className="foo" />
+  return <S.LogoWrapper fluid={logoImage.childImageSharp.fluid} title="Logo Simplesmente Estudante" alt="Desenho de um estudante" />
 }
 
-export default Avatar
+export default LogoImage
