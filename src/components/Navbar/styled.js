@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const NavbarWrapper = styled.aside`
   align-items: center;
-  background: var(--mediumbackground);
+  background: var(--mediumBackground);
   display: flex;
   flex-direction: row;
   padding: 2rem;
