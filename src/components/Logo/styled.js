@@ -17,7 +17,7 @@ export const LogoLink = styled(Link)`
   align-items: center;
 
   &:hover {
-    color: var(--textActive);
+    color: #1fa1f2;
   }
 `
 

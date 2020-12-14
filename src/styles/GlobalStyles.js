@@ -61,11 +61,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     --background: #F8F8F8;
-    --mediumBackground: #FFF;
+    --mediumbackground: #FFF;
     --shadow: #0101010d;
 
     --title: #8899a6;
-    --textActive: #1fa1f2;
   }
 `
 export default GlobalStyles
