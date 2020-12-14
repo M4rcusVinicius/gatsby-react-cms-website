@@ -8,5 +8,5 @@ export const NavbarWrapper = styled.aside`
   padding: 2rem;
   width: 100%;
   box-shadow: var(--shadow) 1px 1px 5px 0px;
-
+  justify-content: space-around;
 `

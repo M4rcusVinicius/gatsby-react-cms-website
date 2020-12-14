@@ -7,11 +7,10 @@ export const NavLinkList = styled.ul`
   font-size: 1.2rem;
   font-weight: 300;
   display: flax;
-    
 `
 
 export const NavLinkItem = styled.li`
-  padding: 0.5rem 0;
+  padding: 0 0.8rem;
   .active {
     color: var(--textActive);
   }
