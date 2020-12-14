@@ -6,15 +6,18 @@ import * as S from "./styled"
 const PostItem = ({
   slug,
   date,
-  timeToRead,
   title,
   description,
+  category,
+  subject,
+  timeToRead,
+  image,
 }) => (
   <S.PostItemLink to={slug}>
     <S.PostItemWrapper>
       <S.PostItemInfo>
         <S.PostItemDate>
-          {date} • {timeToRead} min de leitura
+          {date} • {timeToRead} • {category} • {subject} • {image}
         </S.PostItemDate>
         <S.PostItemTitle>{title}</S.PostItemTitle>
         <S.PostItemDescription>{description}</S.PostItemDescription>
@@ -26,9 +29,12 @@ const PostItem = ({
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  subject: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  timeToRead: PropTypes.string.isRequired,
 }
 
 export default PostItem
