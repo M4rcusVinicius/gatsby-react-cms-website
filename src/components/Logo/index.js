@@ -22,10 +22,12 @@ const Logo = () => {
 
   return (
   <S.LogoWrapper>
-    <S.LogoLink>
+    <S.LogoLink to='/' >
       <LogoImage />
-      <S.LogoTitle>{title}</S.LogoTitle>
-      <S.LogoCompany>{company}</S.LogoCompany>
+      <S.LogoText>
+        <S.LogoTitle>{title}</S.LogoTitle>
+        <S.LogoCompany>{company}</S.LogoCompany>
+      </S.LogoText>
     </S.LogoLink>
   </S.LogoWrapper>
   )

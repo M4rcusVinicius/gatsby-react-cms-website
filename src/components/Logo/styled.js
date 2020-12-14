@@ -3,13 +3,19 @@ import { Link } from "gatsby"
 
 export const LogoWrapper = styled.section`
   color: var(--title);
-  display: flex;
+`
+export const LogoText = styled.div`
+  color: var(--title);
+  margin-left: 0.7rem;
 `
 
 export const LogoLink = styled(Link)`
   color: var(--title);
   text-decoration: none;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+
   &:hover {
     color: #1fa1f2;
   }
