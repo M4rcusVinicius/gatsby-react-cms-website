@@ -17,7 +17,8 @@ const LogoImage = () => {
   `)
 
   if (!logoImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
+    return <div>Imagem não encontrada</div>
+    console.log('Logo image not found')
   }
 
   return <S.LogoImageWrapper fluid={logoImage.childImageSharp.fluid} />
