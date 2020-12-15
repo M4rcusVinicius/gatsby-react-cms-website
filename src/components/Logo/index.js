@@ -1,8 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import LogoImage from '../LogoImage'
-
-import * as S from './styled'
+import LogoImage from './LogoImage'
 
 const Logo = () => {
   const {
@@ -21,13 +19,11 @@ const Logo = () => {
   `)
 
   return (
-    <S.LogoWrapper>
+    <div className="LogoWrapper">
       <LogoImage />
-      <S.LogoLink>
-        <h1>{title}</h1>
-        <h2>{company}</h2>
-      </S.LogoLink>
-    </S.LogoWrapper>
+      <h1>{title}</h1>
+      <h2>{company}</h2>
+    </div>
   )
 }
 

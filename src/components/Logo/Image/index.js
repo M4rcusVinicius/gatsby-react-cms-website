@@ -6,7 +6,7 @@ import * as S from './styled'
 const LogoImage = () => {
   const { logoImage } = useStaticQuery(graphql`
     query {
-      logoImage: file(relativePath: { eq: "logo.png" }) {
+      logoImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
