@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Navbar from "../Navbar"
 
 import * as S from "./styled"
-import GlobalStyles from "../../styles/global"
+import GlobalStyles from "../../styles/GlobalStyles"
 
 const Layout = ({ children }) => {
   return (
