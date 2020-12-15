@@ -13,18 +13,21 @@ const PostItem = ({
   timeToRead,
   image,
   note,
+  author,
 }) => (
   <S.PostItemWrapper>
-        <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
-        <S.PostItemInfo>date: {date}</S.PostItemInfo> 
-        <S.PostItemInfo>title: {title}</S.PostItemInfo>
-        <S.PostItemInfo>description: {description}</S.PostItemInfo>
-        <S.PostItemInfo>category: {category}</S.PostItemInfo>
-        <S.PostItemInfo>subject: {subject}</S.PostItemInfo>
-        <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
-        <S.PostItemInfo>image: {image}</S.PostItemInfo>
-        <S.PostItemInfo>note: {note}</S.PostItemInfo>
-        <S.PostItemInfo>author: {author}</S.PostItemInfo>
+    <S.PostItemLink to={slug}>
+      <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
+      <S.PostItemInfo>date: {date}</S.PostItemInfo> 
+      <S.PostItemInfo>title: {title}</S.PostItemInfo>
+      <S.PostItemInfo>description: {description}</S.PostItemInfo>
+      <S.PostItemInfo>category: {category}</S.PostItemInfo>
+      <S.PostItemInfo>subject: {subject}</S.PostItemInfo>
+      <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
+      <S.PostItemInfo>image: {image}</S.PostItemInfo>
+      <S.PostItemInfo>note: {note}</S.PostItemInfo>
+      <S.PostItemInfo>author: {author}</S.PostItemInfo>
+    </S.PostItemLink>
   </S.PostItemWrapper>
 )
 

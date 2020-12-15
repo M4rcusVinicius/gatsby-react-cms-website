@@ -1,11 +1,21 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
+
+export const PostItemLink = styled(Link)`
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+`
 
 export const PostItemWrapper = styled.section`
-  align-items: center;
+  margin: 1rem;
   border: 2px solid #38444d;
   background: #eee;
-  padding: 1rem;
-  margin: 1rem;
+  transition: background 200ms;
+
+  &:hover {
+    background: #cbe7f0;
+  }
 `
 
 export const PostItemInfo = styled.div`
