@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Simplesmente Estudante`,
-    description: `Este é um site onde qualquer aluno pode postar seu trabalho, redação ou resumo para contribuir com outros estudantes do encino fundamental e medio, alem de poder ler ous trabalhos, resumos e redações dos outros alunos que ja publicaram, dessa forma todos podem estudar juntos !`,
-    author: `Marcus Vinicius Almeida Pires`,
-    company: `Maquina do Mundo`
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +15,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,20 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [],
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
