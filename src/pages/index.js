@@ -18,6 +18,7 @@ const IndexPage = () => {
             image
             title
             subject
+            author
           }
           timeToRead
         }
@@ -49,6 +50,7 @@ return (
           timeToRead={timeToRead}
           image={image}
           note="note"
+          note={author}
           />
         )
       )}

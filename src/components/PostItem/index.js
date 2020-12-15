@@ -24,6 +24,7 @@ const PostItem = ({
         <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
         <S.PostItemInfo>image: {image}</S.PostItemInfo>
         <S.PostItemInfo>note: {note}</S.PostItemInfo>
+        <S.PostItemInfo>author: {author}</S.PostItemInfo>
   </S.PostItemWrapper>
 )
 
@@ -37,6 +38,7 @@ PostItem.propTypes = {
   note: PropTypes.string,
   image: PropTypes.string,
   timeToRead: PropTypes.number.isRequired,
+  author: PropTypes.string.isRequired,
 }
 
 export default PostItem

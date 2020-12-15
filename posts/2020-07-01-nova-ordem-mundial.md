@@ -5,7 +5,7 @@ description: A dita “Nova Ordem Mundial” assinala um período da Modernidade
 category: Trabalho
 subject: Geografia
 image: nova-ordem-mundial.png
-althor: Marcus Vinicius
+author: Marcus Vinicius
 ---
 
 Em todo caso, atualmente, este termo faz alusão à decadência dos 

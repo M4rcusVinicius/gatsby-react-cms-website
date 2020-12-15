@@ -5,7 +5,7 @@ description: Os impactos ambientais designam as diversas formas de afetar o meio
 category: resumo
 subject: Biologia
 image: impactos-ambientais.png
-althor: Marcus Vinicius
+author: Marcus Vinicius
 ---
 
 Como exemplos, temos: o assoreamento dos rios, a desertificação, as 
