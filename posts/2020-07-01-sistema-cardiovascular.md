@@ -5,6 +5,7 @@ description: O sistema cardiovascular ou sistema circulatório humano é respons
 category: resumo
 subject: Biologia
 image: sistema-cardiovascular.png
+althor: Marcus Vinicius
 ---
 
 ![https://static.todamateria.com.br/upload/53/95/539597b590bc6-sistema-cardiovascular-large.jpg](https://static.todamateria.com.br/upload/53/95/539597b590bc6-sistema-cardiovascular-large.jpg)
