@@ -1,9 +1,13 @@
 import React from "react"
+import GlobalStyles from "../../styles/global"
+import * as S from "./styled"
 
 const Layout = ({ children }) => (
-    <>
-        <main>{children}</main>
-    </>
+    <S.LayoutWrapper>
+      <GlobalStyles />
+      <S.LayoutMain />
+      <main>{children}</main>
+    </S.LayoutWrapper>
   )
 
 export default Layout
