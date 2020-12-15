@@ -17,12 +17,12 @@ const PostItem = ({
   <S.PostItemWrapper>
         <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
         <S.PostItemInfo>date: {date}</S.PostItemInfo> 
-        <S.PostItemInfo>tite: {title}</S.PostItemInfo>
-        <S.PostItemInfo>desc: {description}</S.PostItemInfo>
-        <S.PostItemInfo>cate: {category}</S.PostItemInfo>
-        <S.PostItemInfo>subj: {subject}</S.PostItemInfo>
-        <S.PostItemInfo>time: {timeToRead}</S.PostItemInfo>
-        <S.PostItemInfo>imag: {image}</S.PostItemInfo>
+        <S.PostItemInfo>title: {title}</S.PostItemInfo>
+        <S.PostItemInfo>description: {description}</S.PostItemInfo>
+        <S.PostItemInfo>category: {category}</S.PostItemInfo>
+        <S.PostItemInfo>subject: {subject}</S.PostItemInfo>
+        <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
+        <S.PostItemInfo>image: {image}</S.PostItemInfo>
         <S.PostItemInfo>note: {note}</S.PostItemInfo>
   </S.PostItemWrapper>
 )
@@ -36,7 +36,7 @@ PostItem.propTypes = {
   subject: PropTypes.string,
   note: PropTypes.string,
   image: PropTypes.string,
-  timeToRead: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
 }
 
 export default PostItem
