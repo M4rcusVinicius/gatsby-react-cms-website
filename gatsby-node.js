@@ -33,7 +33,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
@@ -61,74 +61,78 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `)
 
-    const posts = result.data.allMarkdownRemark.edges
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const posts = result.data.allMarkdownRemark.edges
 
 
 // ====================================================== //
 //                 Create the post pages                  //
 // ====================================================== //
 
-    posts.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog-post.js`),
-        context: {
-          slug: node.fields.slug,
-        },
-      })
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/blog-post.js`),
+      context: {
+        slug: node.fields.slug,
+      },
     })
+  })
 
 
 // ====================================================== //
 //                 Create home post List                  //
 // ====================================================== //
 
-    const postsPerPage = 1
-    const numPages = Math.ceil(posts.length / postsPerPage)
+  const postsPerPage = 1
+  const numPages = Math.ceil(posts.length / postsPerPage)
 
-    Array.from({ length: numPages }).forEach((_, index) => {
-      createPage({
-        path: index === 0 ? `/` : `/page/${index + 1}`,
-        component: path.resolve(`./src/templates/blog-list.js`),
-        context: {
-          limit: postsPerPage,
-          skip: index * postsPerPage,
-          numPages,
-          currentPage: index + 1,
-        },
-      })
+  Array.from({ length: numPages }).forEach((_, index) => {
+    createPage({
+      path: index === 0 ? `/` : `/page/${index + 1}`,
+      component: path.resolve(`./src/templates/blog-list.js`),
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numPages,
+        currentPage: index + 1,
+      },
     })
+  })
 
 
 // ====================================================== //
 //                  Create category List                  //
 // ====================================================== //
 
-    const categories = result.data.categoryGroup.group
+  const categories = result.data.categoryGroup.group
 
-    const numResumos = categories.find(x => x.tag === 'resumo').totalCount
-    const numPagesResumos = Math.ceil(numResumos / postsPerPage)
+  const numResumos = categories.find(x => x.tag === 'resumo').totalCount
+  const numPagesResumos = Math.ceil(numResumos / postsPerPage)
 
-    console.log(`Numero de resumos econtrados => ${numResumos}`)
-    console.log(`Numero de paginas registradas => ${numPagesResumos}`)
+  console.log(`Numero de resumos econtrados => ${numResumos}`)
+  console.log(`Numero de paginas registradas => ${numPagesResumos}`)
 
-    Array.from({ length: numPagesResumos }).forEach((_, index) => {
-      createPage({
-        path: index === 0 ? `/resumo/` : `/resumo/page/${index + 1}`,
-        component: path.resolve(`./src/templates/blog-category.js`),
-        context: {
-          limit: postsPerPage,
-          skip: index * postsPerPage,
-          numPages: numPagesResumos,
-          currentPage: index + 1,
-          category: 'resumo'
-        },
-      })
-    })  
+  Array.from({ length: numPagesResumos }).forEach((_, index) => {
+    createPage({
+      path: index === 0 ? `/resumo/` : `/resumo/page/${index + 1}`,
+      component: path.resolve(`./src/templates/blog-category.js`),
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numPages: numPagesResumos,
+        currentPage: index + 1,
+        category: 'resumo'
+      },
+    })
+  })  
 
 
 
-  })
 }
