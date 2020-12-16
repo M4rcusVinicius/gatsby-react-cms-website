@@ -1,13 +1,37 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../layout"
-import PostItem from '../PostItem'
+import PostItem from "../PostItem"
 
 const RecommendPosts = () => {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query RecommendPostList {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              image
+              title
+              subject
+              author
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `)
+
+  const postList = allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <>
       {postList.map(
         ({
           node: {
@@ -15,9 +39,9 @@ const RecommendPosts = () => {
             timeToRead,
             fields: { slug },
           },
-        }) => ( 
-          <PostItem 
-            origin={{class: 'home', filter: null}}
+        }) => (
+          <PostItem
+            origin={{class: 'recomended', filter: 'null'}}
             slug={slug}
             date={date}
             title={title}
@@ -31,35 +55,8 @@ const RecommendPosts = () => {
           />
         )
       )}
-      
-    </Layout>
+    </>
   )
 }
-
-export const query = graphql`
-    query PostList {
-      allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            category
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            description
-            image
-            title
-            subject
-            author
-          }
-          timeToRead
-        }
-      }
-    }
-  }
-`
 
 export default RecommendPosts
