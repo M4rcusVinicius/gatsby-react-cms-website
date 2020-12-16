@@ -14,9 +14,10 @@ const PostItem = ({
   image,
   note,
   author,
+  origin,
 }) => (
   <S.PostItemWrapper>
-    <S.PostItemLink to={slug}>
+    <S.PostItemLink to={slug} state={{origin: origin}} >
       <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
       <S.PostItemInfo>date: {date}</S.PostItemInfo> 
       <S.PostItemInfo>title: {title}</S.PostItemInfo>
@@ -27,6 +28,7 @@ const PostItem = ({
       <S.PostItemInfo>image: {image}</S.PostItemInfo>
       <S.PostItemInfo>note: {note}</S.PostItemInfo>
       <S.PostItemInfo>author: {author}</S.PostItemInfo>
+      <S.PostItemInfo>origin: {origin}</S.PostItemInfo> 
     </S.PostItemLink>
   </S.PostItemWrapper>
 )
@@ -42,6 +44,7 @@ PostItem.propTypes = {
   image: PropTypes.string,
   timeToRead: PropTypes.number.isRequired,
   author: PropTypes.string.isRequired,
+  origin: PropTypes.string,
 }
 
 export default PostItem

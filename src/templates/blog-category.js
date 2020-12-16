@@ -27,6 +27,7 @@ const BlogCategory = props => {
           },
         }) => ( 
           <PostItem 
+            origin='category'
             slug={slug}
             date={date}
             title={title}

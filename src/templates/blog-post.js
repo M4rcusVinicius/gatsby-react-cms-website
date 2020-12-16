@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
+  console.log(location.state.origin)
 
   return (
     <>
