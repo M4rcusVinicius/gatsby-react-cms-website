@@ -3,7 +3,7 @@ date: 2020-20-11 15:19:32
 title: Impactos Ambientais
 description: Os impactos ambientais designam as diversas formas de afetar o meio ambiente desestruturando o ecossistema.Eles alteram as condições normais de funcionamento da natureza e podem causar danos irreversíveis ao mundo.
 category: resumo
-subject: Biologia
+subject: biologia
 image: impactos-ambientais.png
 author: Marcus Vinicius
 ---

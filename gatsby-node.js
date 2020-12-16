@@ -60,6 +60,13 @@ exports.createPages = async ({ graphql, actions }) => {
           totalCount
         }
       }
+
+      subjectGroup: allMarkdownRemark {
+        group(field: frontmatter___subject) {
+          subject: fieldValue
+          totalCount
+        }
+      }
     }
   `)
 
@@ -111,32 +118,62 @@ exports.createPages = async ({ graphql, actions }) => {
 //                  Create category List                  //
 // ====================================================== //
 
-const categories = result.data.categoryGroup.group
+  const categories = result.data.categoryGroup.group
+  console.log("\x1b[32m", "\nsuccess", "\x1b[0m", "Create category List")
 
-categories.forEach(cat => {
+  categories.forEach(cat => {
 
-  const numCategoryPages = Math.ceil( cat.totalCount / postsPerPage)
-  const category = cat.category
-  
-  console.log(cat)
-  console.log(`Number of ${category} Pages => ${numCategoryPages}`)
+    const numCategoryPages = Math.ceil( cat.totalCount / postsPerPage)
+    const category = cat.category
+    
+    console.info(`Number of ${category} Pages => ${numCategoryPages}`)
 
-  Array.from({ length: numCategoryPages }).forEach((_, index) => {
-    createPage({
-      path: index === 0 ? `/${category}/` : `/${category}/page/${index + 1}`,
-      component: path.resolve(`./src/templates/blog-category.js`),
-      context: {
-        limit: postsPerPage,
-        skip: index * postsPerPage,
-        numCategoryPages,
-        currentPage: index + 1,
-        category: category,
-      },
+    Array.from({ length: numCategoryPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/${category}/` : `/${category}/page/${index + 1}`,
+        component: path.resolve(`./src/templates/blog-category.js`),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numCategoryPages,
+          currentPage: index + 1,
+          category: category,
+        },
+      })
     })
   })
 
-})
 
+// ====================================================== //
+//                  Create subject List                   //
+// ====================================================== //
+
+  const subjects = result.data.subjectGroup.group
+
+  console.log("\x1b[32m", "\nsuccess", "\x1b[0m", "Create subject List\n")
+
+  subjects.forEach(sub => {
+
+    const numSubjectPages = Math.ceil( sub.totalCount / postsPerPage)
+    const subject = sub.subject
+    
+    console.info(`Number of ${subject} Pages => ${numSubjectPages}`)
+
+    Array.from({ length: numSubjectPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/${subject}/` : `/${subject}/page/${index + 1}`,
+        component: path.resolve(`./src/templates/blog-subject.js`),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numSubjectPages,
+          currentPage: index + 1,
+          subject: subject,
+        },
+      })
+    })
+  
+  })
 
 
 }
