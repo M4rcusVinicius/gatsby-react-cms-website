@@ -27,6 +27,7 @@ const BlogSubject = props => {
           },
         }) => ( 
           <PostItem 
+            origin={{class: 'subject', filter: subject}}
             slug={slug}
             date={date}
             title={title}

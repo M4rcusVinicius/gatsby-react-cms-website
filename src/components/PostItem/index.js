@@ -28,7 +28,8 @@ const PostItem = ({
       <S.PostItemInfo>image: {image}</S.PostItemInfo>
       <S.PostItemInfo>note: {note}</S.PostItemInfo>
       <S.PostItemInfo>author: {author}</S.PostItemInfo>
-      <S.PostItemInfo>origin: {origin}</S.PostItemInfo> 
+      <S.PostItemInfo>origin(class): {origin.class}</S.PostItemInfo> 
+      <S.PostItemInfo>origin(filter): {origin.filter}</S.PostItemInfo> 
     </S.PostItemLink>
   </S.PostItemWrapper>
 )

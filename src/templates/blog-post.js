@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
-  console.log(location.state.origin)
+  console.log(location.state)
 
   return (
     <>
