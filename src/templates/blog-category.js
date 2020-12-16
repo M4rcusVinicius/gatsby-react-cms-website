@@ -9,9 +9,9 @@ import Pagination from '../components/Pagination'
 const BlogCategory = props => {
   const postCategory = props.data.allMarkdownRemark.edges    
 
-  const {  currentPage, numPages, category } = props.pageContext
+  const {  currentPage, numCategoryPages, category } = props.pageContext
   const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const isLast = currentPage === numCategoryPages
   const prevPage = currentPage - 1 === 1 ? `/${category}/` : `/${category}/page/${currentPage - 1}`
   const nextPage = `/${category}/page/${currentPage + 1}`
 
@@ -45,7 +45,7 @@ const BlogCategory = props => {
         isFirst={isFirst}
         isLast={isLast}
         currentPage={currentPage}
-        numPages={numPages}
+        numPages={numCategoryPages}
         prevPage={prevPage}
         nextPage={nextPage}
       />

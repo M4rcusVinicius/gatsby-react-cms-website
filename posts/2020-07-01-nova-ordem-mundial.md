@@ -2,7 +2,7 @@
 date: 2020-20-11 15:19:32
 title:  Nova Ordem Mundial
 description: A dita “Nova Ordem Mundial” assinala um período da Modernidade posterior à Guerra Fria, mas também serve para demarcar os momentos de ruptura com os períodos precedentes, especialmente no que tange à alteração nas formas de organizar as relações internacionais.
-category: Trabalho
+category: trabalho
 subject: Geografia
 image: nova-ordem-mundial.png
 author: Marcus Vinicius

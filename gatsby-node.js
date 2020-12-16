@@ -30,7 +30,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 //                  Get data in GraphQL                   //
 // ====================================================== //
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const result = await graphql(`
@@ -56,7 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
       categoryGroup: allMarkdownRemark {
         group(field: frontmatter___category) {
-          tag: fieldValue
+          category: fieldValue
           totalCount
         }
       }
@@ -111,27 +111,31 @@ exports.createPages = ({ graphql, actions }) => {
 //                  Create category List                  //
 // ====================================================== //
 
-  const categories = result.data.categoryGroup.group
+const categories = result.data.categoryGroup.group
 
-  const numResumos = categories.find(x => x.tag === 'resumo').totalCount
-  const numPagesResumos = Math.ceil(numResumos / postsPerPage)
+categories.forEach(cat => {
 
-  console.log(`Numero de resumos econtrados => ${numResumos}`)
-  console.log(`Numero de paginas registradas => ${numPagesResumos}`)
+  const numCategoryPages = Math.ceil( cat.totalCount / postsPerPage)
+  const category = cat.category
+  
+  console.log(cat)
+  console.log(`Number of ${category} Pages => ${numCategoryPages}`)
 
-  Array.from({ length: numPagesResumos }).forEach((_, index) => {
+  Array.from({ length: numCategoryPages }).forEach((_, index) => {
     createPage({
-      path: index === 0 ? `/resumo/` : `/resumo/page/${index + 1}`,
+      path: index === 0 ? `/${category}/` : `/${category}/page/${index + 1}`,
       component: path.resolve(`./src/templates/blog-category.js`),
       context: {
         limit: postsPerPage,
         skip: index * postsPerPage,
-        numPages: numPagesResumos,
+        numCategoryPages,
         currentPage: index + 1,
-        category: 'resumo'
+        category: category,
       },
     })
-  })  
+  })
+
+})
 
 
 
