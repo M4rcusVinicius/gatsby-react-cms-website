@@ -54,6 +54,12 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      categoryGroup: allMarkdownRemark {
+        group(field: frontmatter___category) {
+          tag: fieldValue
+          totalCount
+        }
+      }
     }
   `).then(result => {
 
@@ -79,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
 //                 Create home post List                  //
 // ====================================================== //
 
-    const postsPerPage = 6
+    const postsPerPage = 1
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, index) => {
@@ -94,6 +100,33 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+
+// ====================================================== //
+//                  Create category List                  //
+// ====================================================== //
+
+    const categories = result.data.categoryGroup.group
+
+    const numResumos = categories.find(x => x.tag === 'resumo').totalCount
+    const numPagesResumos = Math.ceil(numResumos / postsPerPage)
+
+    console.log(`Numero de resumos econtrados => ${numResumos}`)
+    console.log(`Numero de paginas registradas => ${numPagesResumos}`)
+
+    Array.from({ length: numPagesResumos }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/resumo/` : `/resumo/page/${index + 1}`,
+        component: path.resolve(`./src/templates/blog-category.js`),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numPages: numPagesResumos,
+          currentPage: index + 1,
+          category: 'resumo'
+        },
+      })
+    })  
 
 
 
