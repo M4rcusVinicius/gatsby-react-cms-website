@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Comments from '../components/Comments'
+
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
   console.log(location.state)
@@ -9,6 +11,7 @@ const BlogPost = ({ data, location }) => {
     <>
       <h1>Title: {post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <Comments />
     </>
   )
 }
