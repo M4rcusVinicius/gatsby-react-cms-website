@@ -174,6 +174,6 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  console.log('/n')
+  console.log('\n')
 
 }

@@ -17,6 +17,7 @@ const postQuery = `{
           author
         }
         excerpt(pruneLength: 5000)
+        timeToRead
       }
     }
   }
