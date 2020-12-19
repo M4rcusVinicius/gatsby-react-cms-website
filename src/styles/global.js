@@ -60,5 +60,19 @@ const GlobalStyles = createGlobalStyle`
   	width: 100%;
   	height: auto;
   }
+
+  body {
+    --primaryBackground: #F8F8F8;
+    --secondaryBackground: #FFF;
+    --activeBackground: #f2fcff;
+    --border: #1c1d21;
+  }
+
+  body.dark {
+    --primaryBackground: #1A202C;
+    --secondaryBackground: #2D3748;
+    --activeBackground: #718096;
+    --border: #718096;
+  }
 `
 export default GlobalStyles

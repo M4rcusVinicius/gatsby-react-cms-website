@@ -9,12 +9,12 @@ export const PostItemLink = styled(Link)`
 
 export const PostItemWrapper = styled.section`
   margin: 1rem;
-  border: 2px solid #38444d;
-  background: #eee;
+  border: 2px solid var(--border);
+  background: var(--secondaryBackground);
   transition: background 200ms;
 
   &:hover {
-    background: #cbe7f0;
+    background: var(--activeBackground);
   }
 `
 
