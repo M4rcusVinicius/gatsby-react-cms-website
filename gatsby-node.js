@@ -150,7 +150,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const subjects = result.data.subjectGroup.group
 
-  console.log("\x1b[32m", "\nsuccess", "\x1b[0m", "Create subject List\n")
+  console.log("\x1b[32m", "\nsuccess", "\x1b[0m", "Create subject List")
 
   subjects.forEach(sub => {
 
@@ -172,8 +172,8 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
-  
   })
 
+  console.log('\n')
 
 }
