@@ -4,7 +4,7 @@ title:  Sistema Cardiovascular
 description: O sistema cardiovascular ou sistema circulatório humano é responsável pela circulação do sangue, de modo a transportar os nutrientes e o oxigênio por todo o corpo. O Sistema Cardiovascular é formado pelos vasos sanguíneos e o coração.
 category: resumo
 subject: biologia
-image: sistema-cardiovascular.jpg
+image: /assets/img/sistema-cardiovascular.jpg
 author: Marcus Vinicius
 ---
 
