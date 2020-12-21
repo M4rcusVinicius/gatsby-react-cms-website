@@ -11,13 +11,18 @@ const PostItem = ({
   category,
   subject,
   timeToRead,
-  image,
+  featuredImage,
   note,
   author,
   origin,
-}) => (
+}) => {
+  console.log(featuredImage)
+
+  return(
+  
   <S.PostItemWrapper>
     <S.PostItemLink to={slug} state={{origin: origin}} >
+  
       <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
       <S.PostItemInfo>date: {date}</S.PostItemInfo> 
       <S.PostItemInfo>title: {title}</S.PostItemInfo>
@@ -25,14 +30,24 @@ const PostItem = ({
       <S.PostItemInfo>category: {category}</S.PostItemInfo>
       <S.PostItemInfo>subject: {subject}</S.PostItemInfo>
       <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
-      <S.PostItemInfo>image: {image}</S.PostItemInfo>
       <S.PostItemInfo>note: {note}</S.PostItemInfo>
       <S.PostItemInfo>author: {author}</S.PostItemInfo>
       <S.PostItemInfo>origin(class): {origin.class}</S.PostItemInfo> 
       <S.PostItemInfo>origin(filter): {origin.filter}</S.PostItemInfo> 
+
+      <S.PostItemImageContent>
+        <S.PostItemImage fluid={featuredImage} />
+        <S.PostItemImageInfo>
+          <S.PostItemInfo>sizes: {featuredImage.sizes}</S.PostItemInfo>
+          <S.PostItemInfo>source: {featuredImage.src}</S.PostItemInfo>
+          <S.PostItemInfo>sourceSet: {featuredImage.srcSet}</S.PostItemInfo>
+        </S.PostItemImageInfo>
+      </S.PostItemImageContent>
+
     </S.PostItemLink>
   </S.PostItemWrapper>
-)
+  )
+}
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
@@ -42,7 +57,6 @@ PostItem.propTypes = {
   category: PropTypes.string.isRequired,
   subject: PropTypes.string,
   note: PropTypes.string,
-  image: PropTypes.string,
   timeToRead: PropTypes.number.isRequired,
   author: PropTypes.string.isRequired,
   origin: PropTypes.string,

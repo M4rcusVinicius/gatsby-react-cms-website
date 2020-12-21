@@ -25,21 +25,26 @@ const BlogCategory = props => {
             timeToRead,
             fields: { slug },
           },
-        }) => ( 
-          <PostItem 
-            origin={{class: 'category', filter: category}}
-            slug={slug}
-            date={date}
-            title={title}
-            description={description}
-            category={category}
-            subject={subject}
-            timeToRead={timeToRead}
-            image={image}
-            note="note"
-            author={author}
-          />
-        )
+        }) => {
+
+          let featuredImage = image.childImageSharp.fluid
+
+          return (
+            <PostItem 
+              origin={{class: 'category', filter: category}}
+              slug={slug}
+              date={date}
+              title={title}
+              description={description}
+              category={category}
+              subject={subject}
+              timeToRead={timeToRead}
+              featuredImage={featuredImage}
+              note="note"
+              author={author}
+            />
+          )
+        } 
       )}
       
       <Pagination
@@ -72,7 +77,13 @@ export const query = graphql`
             category
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             title
             subject
             author

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 export const PostItemLink = styled(Link)`
   text-decoration: none;
@@ -8,7 +9,8 @@ export const PostItemLink = styled(Link)`
 `
 
 export const PostItemWrapper = styled.section`
-  margin: 1rem;
+  margin: 2rem;
+  padding: 2rem;
   border: 2px solid var(--border);
   background: var(--secondaryBackground);
   transition: background 200ms;
@@ -18,8 +20,28 @@ export const PostItemWrapper = styled.section`
   }
 `
 
-export const PostItemInfo = styled.div`
+export const PostItemInfoContent = styled.div`
+  padding: 0.4rem;
+`
+
+export const PostItemInfo = styled.p`
   margin: 0.4rem;
   font-size: 1.4rem;
   font-family: 'Courier New', Courier, monospace;
+`
+
+export const PostItemImageContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+`
+
+export const PostItemImage = styled(Img)`
+  max-height: 18rem;
+  width: 39%;
+`
+
+export const PostItemImageInfo = styled.div`
+  width: 59%;
+  height: auto;
 `
