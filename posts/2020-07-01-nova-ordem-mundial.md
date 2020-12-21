@@ -4,7 +4,7 @@ title:  Nova Ordem Mundial
 description: A dita “Nova Ordem Mundial” assinala um período da Modernidade posterior à Guerra Fria, mas também serve para demarcar os momentos de ruptura com os períodos precedentes, especialmente no que tange à alteração nas formas de organizar as relações internacionais.
 category: trabalho
 subject: geografia
-image: nova-ordem-mundial.png
+image: nova-ordem-mundial.jpg
 author: Marcus Vinicius
 ---
 
@@ -22,6 +22,8 @@ Em tese, a Nova Ordem teve início com o final da Guerra
 Fria (queda do Muro de Berlim, em 1989 e o fim da União Soviética, em 
 1991), quando os Estados Nacionais aceitaram a hegemonia dos Estados 
 Unidos e reconheceram a OTAN (Organização do Tratado do Atlântico Norte) como a força militar internacional suprema.
+
+![Cidade estilo cyberpunk](/assets/img/nova-ordem-mundial.jpg)
 
 Na realidade, desde o fim da Segunda Guerra Mundial, os EUA passaram a dominar o sistema 
 capitalista, devido seu poderio militar e nuclear, bem como econômico, 
