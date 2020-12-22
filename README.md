@@ -6,7 +6,11 @@
 
 <br />
 
-<h1 align="center">Simple Studante Project</h1>
+<h1 align="center">	
+	<a href="https://simple-studant.netlify.app/" >
+		Simple Studante Project
+	</a>	
+</h1>
 <p align="center">This is a PWA site made in Gatsby, React, GraphQL and Styled Components with CI / CD (CMS) techniques. I tried to make the code simple and intuitive, in addition to an unformatted template to aid in its use. Its main objective is to create a web platform for sharing information related to elementary and high school.</p>
 
 <p align="center">
