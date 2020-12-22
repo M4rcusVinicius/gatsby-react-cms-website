@@ -1,44 +1,74 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/04f469a2-7a07-4b26-96a9-cd5e22dc9297/deploy-status)](https://app.netlify.com/sites/simple-studant/deploys)
+![Gatsby Vercion v2.26.1](https://img.shields.io/badge/gatsby-2.26.1-blue)
+![npm Vercion v6.14.8](https://img.shields.io/badge/npm-6.14.8-blue)
+![License MIT](https://img.shields.io/badge/license-MIT-blue)
+
+<br />
+
+<h1 align="center">Simple Studante Project</h1>
+<p align="center">This is a PWA site made in Gatsby, React, GraphQL and Styled Components with CI / CD (CMS) techniques. I tried to make the code simple and intuitive, in addition to an unformatted template to aid in its use. Its main objective is to create a web platform for sharing information related to elementary and high school.</p>
+
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+ <a href="#objective">Objective</a> |
+ <a href="#start">Quick start</a> |
+ <a href="#about">About the files</a> |
+ <a href="#tech">Tecnologies</a> |
+ <a href="#autor">Autor</a>
 </p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<h4 align="center"> 
+	🚧  Under construction...  🚧
+</h4>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+
+<h2 align="center">	
+	<a href="https://simple-studant.netlify.app/" >
+		🚀 See the live demo 🚀
+	</a>	
+</h2>
+
+<br />
+
+<div id="objective" />
+
+## Platform objective
+This website was created to help students share information, just as programmers have platforms like GitHub and Stackoverflow. Any student can publish their work, abstract or text on the platform, so a research and study work done by a student for a school assignment, for example, can help several others in upcoming assignments or studies for exams
+
+<br />
+
+
+### Features
+- [x] Gatsby GraphQl Structure
+- [x] Layout - Gatsby Image - Styled Components
+- [x] Markdown - Post List - Pagination - Category
+- [x] Algolia Search
+- [x] Light/Dark and Grid/List
+- [ ] Recommended posts sistem
+- [ ] Styled pages and Markdown
+- [ ] Add SEO, PWA and CMS
+
+<br />
+
+<div id="start" />
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+Get started by running the following commands:
+```sh
+$ git clone git@github.com:M4rcusVinicius/simple-studant-website.git
+$ cd simple-studant-website
+$ npm install
+$ npm start
+```
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Your site is now running at `http://localhost:8000`!
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-1.  **Start developing.**
+<br />
 
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+<div id="about">
 
 ## 🧐 What's inside?
 
@@ -66,15 +96,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
 
 10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
@@ -82,18 +112,32 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+<br />
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+<div id="tech" />
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### 🛠 Tecnologies
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+The following tools were used in the construction of the project:
 
-## 💫 Deploy
+- [Netlify](https://app.netlify.com)
+- [Netlify CMS](https://www.netlifycms.org/)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Algolia](https://www.algolia.com/)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+<br />
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+### Autor
+---
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQG1Rmve0U9s2Q/profile-displayphoto-shrink_200_200/0/1606174896348?e=1614211200&v=beta&t=ogBH5IaEepMzzvj9CSJMK6pFQ9qAlS5H5TEwJMdySNU" width="100px;" alt=""/>
+
+Made by Marcus Vinicius
+
+<br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Marcus-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcus-vinicius-almeida-pires-b194691b6/)](https://www.linkedin.com/in/marcus-vinicius-almeida-pires-b194691b6/) 
+[![Gmail Badge](https://img.shields.io/badge/-marcus.vinicius.mvap@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:marcus.vinicius.mvap@gmail.com)](mailto:tgmarinho@gmail.com)
