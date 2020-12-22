@@ -61,7 +61,7 @@ const GlobalStyles = createGlobalStyle`
   	height: auto;
   }
 
-  body {
+  body.light {
     --primaryBackground: #F8F8F8;
     --secondaryBackground: #FFF;
     --activeBackground: #f2fcff;
