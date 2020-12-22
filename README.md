@@ -6,11 +6,7 @@
 
 <br />
 
-<h1 align="center">	
-	<a href="https://simple-studant.netlify.app/" >
-		Simple Studante Project
-	</a>	
-</h1>
+<h1 align="center">Simple Studante Project</h1>
 <p align="center">This is a PWA site made in Gatsby, React, GraphQL and Styled Components with CI / CD (CMS) techniques. I tried to make the code simple and intuitive, in addition to an unformatted template to aid in its use. Its main objective is to create a web platform for sharing information related to elementary and high school.</p>
 
 <p align="center">
@@ -22,8 +18,15 @@
 </p>
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Under construction...  🚧
+	🚧  Under construction...  🚧
 </h4>
+
+
+<h2 align="center">	
+	<a href="https://simple-studant.netlify.app/" >
+		🚀 See the live demo 🚀
+	</a>	
+</h2>
 
 <br />
 
@@ -41,6 +44,7 @@ This website was created to help students share information, just as programmers
 - [x] Markdown - Post List - Pagination - Category
 - [x] Algolia Search
 - [x] Light/Dark and Grid/List
+- [ ] Recommended posts sistem
 - [ ] Styled pages and Markdown
 - [ ] Add SEO, PWA and CMS
 
@@ -50,14 +54,12 @@ This website was created to help students share information, just as programmers
 
 ## 🚀 Quick start
 
-After you have closed the project on your computer, run the following commands inside the main folder.
-
+Get started by running the following commands:
 ```sh
-# install all libraries
-npm install
-
-# Inicia o modo desenvolvedor do gatsby
-gatsby develop
+$ git clone git@github.com:M4rcusVinicius/simple-studant-website.git
+$ cd simple-studant-website
+$ npm install
+$ npm start
 ```
 
 Your site is now running at `http://localhost:8000`!
@@ -124,6 +126,7 @@ The following tools were used in the construction of the project:
 - [React](https://pt-br.reactjs.org/)
 - [Styled Components](https://styled-components.com/)
 - [Gatsby](https://www.gatsbyjs.com/)
+- [Algolia](https://www.algolia.com/)
 
 <br />
 
