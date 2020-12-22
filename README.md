@@ -10,11 +10,10 @@
 <p align="center">This is a PWA site made in Gatsby, React, GraphQL and Styled Components with CI / CD (CMS) techniques. I tried to make the code simple and intuitive, in addition to an unformatted template to aid in its use. Its main objective is to create a web platform for sharing information related to elementary and high school.</p>
 
 <p align="center">
- <a href="#about">About</a> |
- <a href="#techs">Tecnologies</a> |
- <a href="#requirements">Requirements</a> |
- <a href="#run">How to run</a> |
- <a href="#license">License</a> |
+ <a href="#objective">Objective</a> |
+ <a href="#start">Quick start</a> |
+ <a href="#about">About the files</a> |
+ <a href="#tech">Tecnologies</a> |
  <a href="#autor">Autor</a>
 </p>
 
@@ -23,6 +22,14 @@
 </h4>
 
 <br />
+
+<div id="objective" />
+
+## Platform objective
+This website was created to help students share information, just as programmers have platforms like GitHub and Stackoverflow. Any student can publish their work, abstract or text on the platform, so a research and study work done by a student for a school assignment, for example, can help several others in upcoming assignments or studies for exams
+
+<br />
+
 
 ### Features
 - [x] Gatsby GraphQl Structure
@@ -34,6 +41,8 @@
 - [ ] Add SEO, PWA and CMS
 
 <br />
+
+<div id="start" />
 
 ## 🚀 Quick start
 
@@ -52,6 +61,8 @@ Your site is now running at `http://localhost:8000`!
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 <br />
+
+<div id="about">
 
 ## 🧐 What's inside?
 
@@ -97,7 +108,9 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 <br />
 
-### 🛠 Technology
+<div id="tech" />
+
+### 🛠 Tecnologies
 
 The following tools were used in the construction of the project:
 
@@ -113,9 +126,11 @@ The following tools were used in the construction of the project:
 ### Autor
 ---
 
- <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQG1Rmve0U9s2Q/profile-displayphoto-shrink_200_200/0/1606174896348?e=1614211200&v=beta&t=ogBH5IaEepMzzvj9CSJMK6pFQ9qAlS5H5TEwJMdySNU" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQG1Rmve0U9s2Q/profile-displayphoto-shrink_200_200/0/1606174896348?e=1614211200&v=beta&t=ogBH5IaEepMzzvj9CSJMK6pFQ9qAlS5H5TEwJMdySNU" width="100px;" alt=""/>
 
 Made by Marcus Vinicius
+
 <br />
+
 [![Linkedin Badge](https://img.shields.io/badge/-Marcus-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcus-vinicius-almeida-pires-b194691b6/)](https://www.linkedin.com/in/marcus-vinicius-almeida-pires-b194691b6/) 
 [![Gmail Badge](https://img.shields.io/badge/-marcus.vinicius.mvap@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:marcus.vinicius.mvap@gmail.com)](mailto:tgmarinho@gmail.com)
