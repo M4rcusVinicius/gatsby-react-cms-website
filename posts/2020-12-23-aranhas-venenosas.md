@@ -8,7 +8,7 @@ date: 2020-10-22 06:37:09
 category: resumo
 subject: biologia
 author: Anakin Skywalker
-image: assets/img/aranhas-venenosas.jpg
+image: ../static/assets/img/aranhas-venenosas.jpg
 ---
 A picada da aranha pode ocasionar vermelhidão, dor, inchaço, dor de cabeça e em casos mais graves, a morte do indivíduo. Tudo irá depender da espécie, quantidade de veneno injetado e das características corporais da vítima.
 
