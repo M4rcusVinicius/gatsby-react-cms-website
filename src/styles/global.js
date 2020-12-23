@@ -77,6 +77,8 @@ const GlobalStyles = createGlobalStyle`
     --soft: #2a2a2a;
     --clear: #6f6f6f;
     --light: #d5d5d5;
+    --background: #F8F8F8;
+    --base: #fff;
   }
 
   body.dark {

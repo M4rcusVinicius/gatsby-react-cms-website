@@ -4,37 +4,42 @@ import Img from "gatsby-image"
 
 export const PostItemLink = styled(Link)`
   text-decoration: none;
-  padding: 1rem;
-  color: black;
-`
 
-export const PostItemWrapper = styled.section`
-  margin: 2rem;
-  padding: 2rem;
-  border: 2px solid var(--border);
-  background: var(--secondaryBackground);
-  transition: background 200ms;
 
-  &:hover {
-    background: var(--activeBackground);
+  body#grid & {
+    flex-direction: column;
+    justify-content: center;
   }
 `
 
-export const PostItemInfoContent = styled.div`
-  padding: 0.4rem;
+export const PostItemWrapper = styled.section`
+  background-color: var(--base);
+  padding: 0.5rem;
+  box-shadow: 0px 0px 5px var(--light);
+  border-radius: 10px;
+  
+  &:hover {
+  }
 `
 
-export const PostItemInfo = styled.p`
-  margin: 0.4rem;
-  font-size: 1.4rem;
-  font-family: 'Courier New', Courier, monospace;
+export const PostItemInfo = styled.div`
+  padding: 1.5rem 0.5rem 0.5rem;
 `
 
-export const PostItemImageContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 0;
+export const PostItemDescription = styled.p`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  margin: 1rem 0;
+  color: var(--clear);
+  font-size: 1rem;
+  font-weight: 600;
 `
 
 export const PostItemImage = styled(Img)`
+  border-radius: 10px;
+  max-height: 14rem;
 `

@@ -6,7 +6,8 @@ import SEO from "../components/seo"
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
-import * as S from "../components/ListWrapper/styled"
+import * as S from "../components/PostList/styled"
+import * as G from "../styles/GlobalComponents"
 
 const BlogCategory = props => {
   const postCategory = props.data.allMarkdownRemark.edges    
@@ -17,10 +18,21 @@ const BlogCategory = props => {
   const prevPage = currentPage - 1 === 1 ? `/${category}/` : `/${category}/page/${currentPage - 1}`
   const nextPage = `/${category}/page/${currentPage + 1}`
 
+  let categoryName = ''
+
+  if (category === 'redacao') {
+    categoryName = 'Redação'
+  } else if (category != null) {
+    categoryName = category[0].toUpperCase() + category.slice(1)
+  }
+
   return (
     <Layout>
       <SEO title="Home" />
       <S.ListWrapper>
+
+        <G.FeaturedTitle>{categoryName}</G.FeaturedTitle>
+      
         <S.ListContent>
           {postCategory.map(
             ({
@@ -52,7 +64,7 @@ const BlogCategory = props => {
           )}
         </S.ListContent>
       </S.ListWrapper>
-      
+
       <Pagination
         isFirst={isFirst}
         isLast={isLast}

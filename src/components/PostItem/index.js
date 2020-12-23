@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import * as S from "./styled"
+import * as G from "../../styles/GlobalComponents"
 
 const PostItem = ({
   slug,
@@ -16,7 +17,7 @@ const PostItem = ({
   author,
   origin,
 }) => {
-  console.log(featuredImage)
+  console.log(PostItem)
 
   return(
   
@@ -24,16 +25,14 @@ const PostItem = ({
     <S.PostItemLink to={slug} state={{origin: origin}} >
       
       <S.PostItemImage fluid={featuredImage} />
-  
-      <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
-      <S.PostItemInfo>date: {date}</S.PostItemInfo> 
-      <S.PostItemInfo>title: {title}</S.PostItemInfo>
-      <S.PostItemInfo>description: {description}</S.PostItemInfo>
-      <S.PostItemInfo>category: {category}</S.PostItemInfo>
-      <S.PostItemInfo>subject: {subject}</S.PostItemInfo>
-      <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
-      <S.PostItemInfo>note: {note}</S.PostItemInfo>
-      <S.PostItemInfo>author: {author}</S.PostItemInfo>
+
+      <S.PostItemInfo>
+        <G.Title>{title}</G.Title>
+        <G.Info>{category} • {subject} • {timeToRead} min</G.Info>
+        <S.PostItemDescription>{description}</S.PostItemDescription>
+        <G.Text>note: {note}</G.Text>
+        <G.Text>author: {author}</G.Text>
+      </S.PostItemInfo>
 
     </S.PostItemLink>
   </S.PostItemWrapper>
