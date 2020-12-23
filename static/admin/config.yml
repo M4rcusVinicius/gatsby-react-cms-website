@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: M4rcusVinicius/simple-studant-website
+  branch: main
+  site_domain: https://simple-studant.netlify.app/
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Titulo", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - {
+          label: "Data",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "Categoria", name: "category", widget: "string" }
+      - { label: "Materia", name: "subject", widget: "string" }
+      - { label: "Autor", name: "author", widget: "string" }
+      - { label: "image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

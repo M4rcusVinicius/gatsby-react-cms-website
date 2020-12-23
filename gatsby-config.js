@@ -76,6 +76,7 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          `gatsby-plugin-netlify-cms`,
         ],
       },
     },
