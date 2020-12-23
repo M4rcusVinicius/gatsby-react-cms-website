@@ -37,11 +37,4 @@ export const PostItemImageContent = styled.div`
 `
 
 export const PostItemImage = styled(Img)`
-  max-height: 18rem;
-  width: 39%;
-`
-
-export const PostItemImageInfo = styled.div`
-  width: 59%;
-  height: auto;
 `

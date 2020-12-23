@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
+import * as S from "../components/ListWrapper/styled"
+
 const BlogCategory = props => {
   const postCategory = props.data.allMarkdownRemark.edges    
 
@@ -18,34 +20,38 @@ const BlogCategory = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {postCategory.map(
-        ({
-          node: {
-            frontmatter: { category, date, description, image, title, subject, author },
-            timeToRead,
-            fields: { slug },
-          },
-        }) => {
+      <S.ListWrapper>
+        <S.ListContent>
+          {postCategory.map(
+            ({
+              node: {
+                frontmatter: { category, date, description, image, title, subject, author },
+                timeToRead,
+                fields: { slug },
+              },
+            }) => {
 
-          let featuredImage = image.childImageSharp.fluid
+              let featuredImage = image.childImageSharp.fluid
 
-          return (
-            <PostItem 
-              origin={{class: 'category', filter: category}}
-              slug={slug}
-              date={date}
-              title={title}
-              description={description}
-              category={category}
-              subject={subject}
-              timeToRead={timeToRead}
-              featuredImage={featuredImage}
-              note="note"
-              author={author}
-            />
-          )
-        } 
-      )}
+              return (
+                <PostItem 
+                  origin={{class: 'category', filter: category}}
+                  slug={slug}
+                  date={date}
+                  title={title}
+                  description={description}
+                  category={category}
+                  subject={subject}
+                  timeToRead={timeToRead}
+                  featuredImage={featuredImage}
+                  note="note"
+                  author={author}
+                />
+              )
+            } 
+          )}
+        </S.ListContent>
+      </S.ListWrapper>
       
       <Pagination
         isFirst={isFirst}

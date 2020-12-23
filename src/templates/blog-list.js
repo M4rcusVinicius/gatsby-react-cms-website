@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
+import * as S from "../components/ListWrapper/styled"
+
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges    
 
@@ -19,35 +21,37 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {postList.map(
-        ({
-          node: {
-            frontmatter: { category, date, description, image, title, subject, author },
-            timeToRead,
-            fields: { slug },
-          },
-        }) => {
+      <S.ListWrapper>
+        {postList.map(
+          ({
+            node: {
+              frontmatter: { category, date, description, image, title, subject, author },
+              timeToRead,
+              fields: { slug },
+            },
+          }) => {
 
-          let featuredImage = image.childImageSharp.fluid
+            let featuredImage = image.childImageSharp.fluid
 
-          return (
-            <PostItem 
-              origin={{class: 'home', filter: null}}
-              slug={slug}
-              date={date}
-              title={title}
-              description={description}
-              category={category}
-              subject={subject}
-              timeToRead={timeToRead}
-              featuredImage={featuredImage}
-              note="note"
-              author={author}
-            />
-          )
-        } 
-      )}
-      
+            return (
+              <PostItem 
+                origin={{class: 'home', filter: null}}
+                slug={slug}
+                date={date}
+                title={title}
+                description={description}
+                category={category}
+                subject={subject}
+                timeToRead={timeToRead}
+                featuredImage={featuredImage}
+                note="note"
+                author={author}
+              />
+            )
+          } 
+        )}
+      </S.ListWrapper>
+
       <Pagination
         isFirst={isFirst}
         isLast={isLast}

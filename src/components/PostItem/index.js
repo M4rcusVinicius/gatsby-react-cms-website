@@ -22,6 +22,8 @@ const PostItem = ({
   
   <S.PostItemWrapper>
     <S.PostItemLink to={slug} state={{origin: origin}} >
+      
+      <S.PostItemImage fluid={featuredImage} />
   
       <S.PostItemInfo>slug: {slug}</S.PostItemInfo> 
       <S.PostItemInfo>date: {date}</S.PostItemInfo> 
@@ -32,17 +34,6 @@ const PostItem = ({
       <S.PostItemInfo>timeToRead: {timeToRead}</S.PostItemInfo>
       <S.PostItemInfo>note: {note}</S.PostItemInfo>
       <S.PostItemInfo>author: {author}</S.PostItemInfo>
-      <S.PostItemInfo>origin(class): {origin.class}</S.PostItemInfo> 
-      <S.PostItemInfo>origin(filter): {origin.filter}</S.PostItemInfo> 
-
-      <S.PostItemImageContent>
-        <S.PostItemImage fluid={featuredImage} />
-        <S.PostItemImageInfo>
-          <S.PostItemInfo>sizes: {featuredImage.sizes}</S.PostItemInfo>
-          <S.PostItemInfo>source: {featuredImage.src}</S.PostItemInfo>
-          <S.PostItemInfo>sourceSet: {featuredImage.srcSet}</S.PostItemInfo>
-        </S.PostItemImageInfo>
-      </S.PostItemImageContent>
 
     </S.PostItemLink>
   </S.PostItemWrapper>
