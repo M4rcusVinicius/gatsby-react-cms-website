@@ -43,7 +43,13 @@ const BlogSubject = props => {
               },
             }) => {
 
-              let featuredImage = image.childImageSharp.fluid
+              let featuredImage = {}
+              
+              if (!image?.childImageSharp?.fluid) {
+                featuredImage = { result: "Imagem não encontrada" }
+              } else {
+                featuredImage = image.childImageSharp.fluid
+              }
 
               return (
                 <PostItem  

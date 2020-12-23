@@ -34,13 +34,21 @@ const PostItem = ({
     subjectName = subject[0].toUpperCase() + subject.slice(1)
   }
 
+  const Image = () => {
+    if (featuredImage?.result) {
+      return(<div>Imagem não incontrada</div>)
+    } else {
+      return(<S.PostItemImage fluid={featuredImage} />)
+    } 
+  }
+  
   return(
   
   <S.PostItemWrapper>
     <S.PostItemLink to={slug} state={{origin: origin}} >
-      
-      <S.PostItemImage fluid={featuredImage} />
 
+      <Image />
+    
       <S.PostItemInfo>
         <G.Title>{title}</G.Title>
         <G.Info>{categoryName} • {subjectName} • {timeToRead} min</G.Info>
