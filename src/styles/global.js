@@ -1,10 +1,14 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
   */
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -53,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Nunito', sans-serif;
   }
   img {
     display: block;
@@ -62,10 +66,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.light {
-    --primaryBackground: #F8F8F8;
-    --secondaryBackground: #FFF;
-    --activeBackground: #f2fcff;
-    --border: #1c1d21;
+    --blue: #2c4be4;
+    --blueDark: #001789;
+    --blueSoft: #003e9b;
+    --blueClear: #2885ff;
+    --blueStrDark: #1b203a;
+    --blueStrSoft: #132e57;
+    --blueStrClear: #327ad9;
+    --dark: #0e0e0e;
+    --soft: #2a2a2a;
+    --clear: #6f6f6f;
+    --light: #d5d5d5;
   }
 
   body.dark {
@@ -76,3 +87,4 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 export default GlobalStyles
+
