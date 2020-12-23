@@ -6,6 +6,9 @@ import SEO from "../components/seo"
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
+import * as S from "../components/PostList/styled"
+import * as G from "../styles/GlobalComponents"
+
 const BlogSubject = props => {
   const postSubject = props.data.allMarkdownRemark.edges    
 
@@ -15,37 +18,52 @@ const BlogSubject = props => {
   const prevPage = currentPage - 1 === 1 ? `/${subject}/` : `/${subject}/page/${currentPage - 1}`
   const nextPage = `/${subject}/page/${currentPage + 1}`
 
+  let subjectName = ''
+
+  if (subject === 'redacao') {
+    subjectName = 'Redação'
+  } else if (subject != null) {
+    subjectName = subject[0].toUpperCase() + subject.slice(1)
+  }
+
   return (
     <Layout>
       <SEO title="Home" />
-      {postSubject.map(
-        ({
-          node: {
-            frontmatter: { category, date, description, image, title, subject, author },
-            timeToRead,
-            fields: { slug },
-          },
-        }) => {
+      <S.ListWrapper>
 
-          let featuredImage = image.childImageSharp.fluid
+        <G.FeaturedTitle>{subjectName}</G.FeaturedTitle>
+        
+        <S.ListContent>
+          {postSubject.map(
+            ({
+              node: {
+                frontmatter: { category, date, description, image, title, subject, author },
+                timeToRead,
+                fields: { slug },
+              },
+            }) => {
 
-          return (
-            <PostItem  
-              origin={{class: 'subject', filter: subject}}
-              slug={slug}
-              date={date}
-              title={title}
-              description={description}
-              category={category}
-              subject={subject}
-              timeToRead={timeToRead}
-              featuredImage={featuredImage}
-              note="note"
-              author={author}
-            />
-          )
-        } 
-      )}
+              let featuredImage = image.childImageSharp.fluid
+
+              return (
+                <PostItem  
+                  origin={{class: 'subject', filter: subject}}
+                  slug={slug}
+                  date={date}
+                  title={title}
+                  description={description}
+                  category={category}
+                  subject={subject}
+                  timeToRead={timeToRead}
+                  featuredImage={featuredImage}
+                  note="note"
+                  author={author}
+                />
+              )
+            } 
+          )}
+        </S.ListContent>
+      </S.ListWrapper>
       
       <Pagination
         isFirst={isFirst}

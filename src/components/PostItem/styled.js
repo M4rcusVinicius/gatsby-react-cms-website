@@ -17,6 +17,12 @@ export const PostItemWrapper = styled.section`
   padding: 0.5rem;
   box-shadow: 0px 0px 5px var(--light);
   border-radius: 10px;
+
+  body#grid & {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 35rem;
+  }
   
   &:hover {
   }

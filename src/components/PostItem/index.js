@@ -19,6 +19,21 @@ const PostItem = ({
 }) => {
   console.log(PostItem)
 
+  let categoryName = '' 
+  let subjectName = '' 
+  
+  if (category === 'redacao') {
+    categoryName = 'Redação'
+  } else if (category != null) {
+    categoryName = category[0].toUpperCase() + category.slice(1)
+  }
+
+  if (subject === 'redacao') {
+    subjectName = 'Redação'
+  } else if (subject != null) {
+    subjectName = subject[0].toUpperCase() + subject.slice(1)
+  }
+
   return(
   
   <S.PostItemWrapper>
@@ -28,10 +43,8 @@ const PostItem = ({
 
       <S.PostItemInfo>
         <G.Title>{title}</G.Title>
-        <G.Info>{category} • {subject} • {timeToRead} min</G.Info>
+        <G.Info>{categoryName} • {subjectName} • {timeToRead} min</G.Info>
         <S.PostItemDescription>{description}</S.PostItemDescription>
-        <G.Text>note: {note}</G.Text>
-        <G.Text>author: {author}</G.Text>
       </S.PostItemInfo>
 
     </S.PostItemLink>

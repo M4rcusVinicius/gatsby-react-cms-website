@@ -11,6 +11,6 @@ export const ListContent = styled.section`
     display: grid;
     grid-area: posts;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   }
 `
