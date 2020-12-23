@@ -5,7 +5,7 @@ export const NavbarWrapper = styled.nav`
   justify-content: space-around;
   align-items: center;
   background-color: var(--secondaryBackground);
-  padding: 1rem;
+  padding: 1.3rem;
   margin-bottom: 2rem;
   box-shadow: 0px 0px 10px var(--light);
 `

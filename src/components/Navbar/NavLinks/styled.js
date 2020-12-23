@@ -23,7 +23,7 @@ export const NavLinksLink = styled(Link)`
   color: var(--clear);
   position: relative;
   padding: 0.2rem 0.2rem;
-  transition: color 200ms;
+  transition: color 400ms;
 
   &:after {
     background: none repeat scroll 0 0 transparent;

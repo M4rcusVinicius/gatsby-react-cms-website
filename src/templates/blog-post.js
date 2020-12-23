@@ -1,15 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+import * as S from '../components/Post/styled'
+
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
   console.log(location.state)
 
   return (
-    <>
-      <h1>Title: {post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-    </>
+    <Layout>
+      <SEO title="Pesquisa" />
+      <S.PostContent>
+        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </S.PostContent>
+    </Layout>
   )
 }
 
