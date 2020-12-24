@@ -5,8 +5,8 @@ backend:
   site_domain: https://simple-studant.netlify.app/
 
 publish_mode: editorial_workflow
-media_folder: "static/assets/img"
-public_folder: "static/assets/img"
+media_folder: "../static/assets/img/"
+public_folder: "../static/assets/img/"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -29,7 +29,12 @@ collections:
           widget: "select",
           options: ["trabalho", "redacao", "resumo"]
         }
-      - { label: "Materia", name: "subject", widget: "string" }
+      - {
+          label: "Materia",
+          name: "subject",
+          widget: "select",
+          options: ["biologia", "filosofia", "fisica", "geografia", "historia", "portugues", "literatura", "matematica", "quimica", "ingles", "enem"]
+        }
       - { label: "Autor", name: "author", widget: "string" }
       - { label: "Imagem", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

@@ -8,7 +8,7 @@ date: 2020-12-23 07:02:29
 category: resumo
 subject: historia
 author: Anakin Skywalker
-image: static/assets/img/rodion-kutsaev-ysnkckdkyty-unsplash.jpg
+image: ../static/assets/img/rodion-kutsaev-ysnkckdkyty-unsplash.jpg
 ---
 <!--StartFragment-->
 

@@ -17,7 +17,6 @@ const PostItem = ({
   author,
   origin,
 }) => {
-  console.log(PostItem)
 
   let categoryName = '' 
   let subjectName = '' 

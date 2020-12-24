@@ -8,7 +8,6 @@ import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
-  console.log(location.state)
 
   return (
     <Layout>
