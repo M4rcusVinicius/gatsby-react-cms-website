@@ -28,7 +28,7 @@ const BlogCategory = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={categoryName} />
       <S.ListWrapper>
 
         <G.FeaturedTitle>{categoryName}</G.FeaturedTitle>
@@ -43,14 +43,6 @@ const BlogCategory = props => {
               },
             }) => {
 
-              let featuredImage = {}
-              
-              if (!image?.childImageSharp?.fluid) {
-                featuredImage = { result: "Imagem não encontrada" }
-              } else {
-                featuredImage = image.childImageSharp.fluid
-              }
-
               return (
                 <PostItem 
                   origin={{class: 'category', filter: category}}
@@ -61,7 +53,7 @@ const BlogCategory = props => {
                   category={category}
                   subject={subject}
                   timeToRead={timeToRead}
-                  featuredImage={featuredImage}
+                  image={image}
                   note="note"
                   author={author}
                 />
@@ -103,8 +95,13 @@ export const query = graphql`
             description
             image {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 600) {
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                  originalImg
+                  originalName
                 }
               }
             }

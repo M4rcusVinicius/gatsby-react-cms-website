@@ -11,7 +11,19 @@ const postQuery = `{
           date_timestamp: date
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
           description
-          image
+          image {
+            publicURL
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                aspectRatio
+                src
+                srcSet
+                sizes
+                originalImg
+                originalName
+              }
+            }
+          }
           title
           subject
           author

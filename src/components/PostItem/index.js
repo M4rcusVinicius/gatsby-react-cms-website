@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Image from './Image' 
 import * as S from "./styled"
 import * as G from "../../styles/GlobalComponents"
 
@@ -12,7 +13,7 @@ const PostItem = ({
   category,
   subject,
   timeToRead,
-  featuredImage,
+  image,
   note,
   author,
   origin,
@@ -31,22 +32,14 @@ const PostItem = ({
     subjectName = 'Redação'
   } else if (subject != null) {
     subjectName = subject[0].toUpperCase() + subject.slice(1)
-  }
-
-  const Image = () => {
-    if (featuredImage?.result) {
-      return(<div>Imagem não incontrada</div>)
-    } else {
-      return(<S.PostItemImage fluid={featuredImage} />)
-    } 
-  }
+  }  
   
-  return(
+    return(
   
   <S.PostItemWrapper>
     <S.PostItemLink to={slug} state={{origin: origin}} >
 
-      <Image />
+      <Image image={image} slug={slug} />
     
       <S.PostItemInfo>
         <G.Title>{title}</G.Title>

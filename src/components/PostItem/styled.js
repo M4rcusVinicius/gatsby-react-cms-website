@@ -49,3 +49,9 @@ export const PostItemImage = styled(Img)`
   border-radius: 10px;
   max-height: 14rem;
 `
+
+export const PostItemImageNotFound = styled(Img)`
+  border-radius: 10px;
+  height: 14rem;
+  background-color: var(--light);
+`
