@@ -28,7 +28,9 @@ const BlogCategory = props => {
 
   return (
     <Layout>
-      <SEO title={categoryName} />
+      <SEO
+        title={`Categorias | pagina ${currentPage + 1}`}
+      />
       <S.ListWrapper>
 
         <G.FeaturedTitle>{categoryName}</G.FeaturedTitle>

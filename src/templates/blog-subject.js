@@ -28,7 +28,9 @@ const BlogSubject = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title={`Materias | pagina ${currentPage + 1}`}
+      />
       <S.ListWrapper>
 
         <G.FeaturedTitle>{subjectName}</G.FeaturedTitle>

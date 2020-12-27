@@ -20,7 +20,10 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title={`Todos os posts | pagina ${currentPage + 1}`}
+      />
+      <S.ListWrapper>
       <S.ListContent>
         {postList.map(
           ({
@@ -49,7 +52,8 @@ const BlogList = props => {
           } 
         )}
       </S.ListContent>
-
+      </S.ListWrapper>
+      
       <Pagination
         isFirst={isFirst}
         isLast={isLast}
