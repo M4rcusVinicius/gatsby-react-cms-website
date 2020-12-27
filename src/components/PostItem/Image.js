@@ -10,9 +10,9 @@ const Image = ({image, slug}) => {
     return(<S.PostItemImage fluid={featuredImage} />)
   } else {
 
-    console.warn(`Featured Image not found`)
-    console.warn(`slug: ${slug}`)
-    console.warn(`Image object: ${{image}}`)
+    console.info(`Featured Image not found`)
+    console.info(`slug: ${slug}`)
+    console.info(`Image: ${image}`)
 
     return(<DefaultFeaturedImage />)
   }
