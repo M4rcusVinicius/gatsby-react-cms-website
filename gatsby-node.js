@@ -48,6 +48,13 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               subject
               author
+              image {
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
+              }
             }
             timeToRead
           }

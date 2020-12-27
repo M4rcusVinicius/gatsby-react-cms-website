@@ -11,7 +11,11 @@ const BlogPost = ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title="Pesquisa" />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+      />
       <S.PostContent>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
