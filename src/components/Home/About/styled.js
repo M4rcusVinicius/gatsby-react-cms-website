@@ -1,28 +1,21 @@
 import styled from 'styled-components'
 import { Link } from "gatsby"
 
-export const AboutWrapper = styled(Link)`
+export const AboutWrapper = styled.section`
   display: flex;
   justify-content: space-around;
-  margin: 0 2rem;
   align-items: center;
-
-  color: var(--blueStrDark);
   background-color: var(--base);
-  padding: 2rem 4rem;
-  border-radius: 2rem;
-  box-shadow: 2px 2px 5px var(--light); 
-  text-decoration: none;
-  transition: 200ms;
-
-  &:hover {
-    translate: 2px -5px;
-  }
-
+  padding: 0rem 5rem;
+  height: calc(100vh - 5rem);
 `
 
 export const AboutInfo = styled.div`
-  max-width: 35rem;
+  max-width: 30rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const AboutTitle = styled.h1`
@@ -41,5 +34,51 @@ export const AboutDescription = styled.p`
   font-weight: 600;
   color: var(--blueStrSoft);
   font-size: 1.2rem;
-  margin-top: 3rem;
+  margin-top: 3.2rem;
+`
+
+export const ButtonPrimary = styled(Link)`
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  color: var(--base);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 10rem;
+  transition: 200ms;
+
+  &:hover {
+    background: var(--blueStrClear);
+    translate: 2px -4px;
+    border: 2px solid var(--blueStrClear);
+  }
+`
+
+export const Button = styled(Link)`
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 10rem;
+  transition: 200ms;
+
+  &:hover {
+    background: #d6e8ff;
+    border: 2px solid var(--blueStrClear);
+    translate: 2px -4px;
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 22rem;
+  margin-top: 2.5rem;
 `
