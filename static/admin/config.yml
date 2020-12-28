@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: M4rcusVinicius/simple-studant-website
+  repo: M4rcusVinicius/simple-studant
   branch: main
   site_domain: https://simple-studant.netlify.app/
 
