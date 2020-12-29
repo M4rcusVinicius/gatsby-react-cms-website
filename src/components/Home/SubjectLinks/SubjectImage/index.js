@@ -25,8 +25,6 @@ const SubjectImage = (props) => {
 
   const Image = ImagesData.find( image => image.node.childImageSharp.fluid.originalName === props.icon );
 
-  console.log(Image)  
-
   return <S.SubjectImageWrapper fluid={Image.node.childImageSharp.fluid}></S.SubjectImageWrapper>
 }
 
