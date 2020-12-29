@@ -14,16 +14,13 @@ const BlogList = props => {
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? '/todos/' : `/todos/pagina/${currentPage - 1}`
-  const nextPage = `/todos/pagina/${currentPage + 1}`
+  const prevPage = `/page/${currentPage - 1}`
+  const nextPage = `/page/${currentPage + 1}`
 
 
   return (
     <Layout>
-      <SEO
-        title={`Todos os posts | pagina ${currentPage + 1}`}
-      />
-      <S.ListWrapper>
+      <SEO title="Home" />
       <S.ListContent>
         {postList.map(
           ({
@@ -33,6 +30,14 @@ const BlogList = props => {
               fields: { slug },
             },
           }) => {
+
+            let featuredImage = {}
+              
+            if (!image?.childImageSharp?.fluid) {
+              featuredImage = { result: "Imagem não encontrada" }
+            } else {
+              featuredImage = image.childImageSharp.fluid
+            }
 
             return (
               <PostItem 
@@ -44,7 +49,7 @@ const BlogList = props => {
                 category={category}
                 subject={subject}
                 timeToRead={timeToRead}
-                image={image}
+                featuredImage={featuredImage}
                 note="note"
                 author={author}
               />
@@ -52,8 +57,7 @@ const BlogList = props => {
           } 
         )}
       </S.ListContent>
-      </S.ListWrapper>
-      
+
       <Pagination
         isFirst={isFirst}
         isLast={isLast}
