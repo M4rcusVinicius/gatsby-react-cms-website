@@ -56,7 +56,7 @@ const links = [
   {
     subject: "Sociologia",
     url: "sociologia",
-    icon: "quimica.png",
+    icon: "sociologia.png",
     description: "",
   },
   {
