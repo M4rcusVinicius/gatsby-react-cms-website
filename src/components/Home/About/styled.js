@@ -8,6 +8,7 @@ export const AboutWrapper = styled.section`
   background-color: var(--base);
   padding: 0rem 5rem;
   height: calc(100vh - 5rem);
+  border-bottom: 2px solid var(--light)
 `
 
 export const AboutInfo = styled.div`
