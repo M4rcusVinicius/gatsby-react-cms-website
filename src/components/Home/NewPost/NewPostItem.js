@@ -16,6 +16,7 @@ const NewPostItem = ({
   note,
   author,
   origin,
+  index,
 }) => {
 
   let categoryName = '' 
@@ -31,12 +32,18 @@ const NewPostItem = ({
     subjectName = 'Redação'
   } else if (subject != null) {
     subjectName = subject[0].toUpperCase() + subject.slice(1)
-  }  
-  
+  }   
+
+  let reverse = true
+
+  if (index/2 == 0) {
+    reverse = false
+  }
+
   return(
   <S.NewPostItemWrapper>
-      <S.NewPostItemLink to={slug} state={{origin: origin}} >
-
+      <S.NewPostItemCardContent reverse={reverse}><S.NewPostItemCard reverse={reverse}>Novo</S.NewPostItemCard></S.NewPostItemCardContent>
+      <S.NewPostItemLink to={slug} state={{origin: origin}} reverse={reverse} >  
 
         <Image image={image} slug={slug} width="25rem" height="19rem"/>
       
@@ -63,6 +70,7 @@ NewPostItem.propTypes = {
   timeToRead: PropTypes.number.isRequired,
   author: PropTypes.string.isRequired,
   origin: PropTypes.string,
+  index: PropTypes.number,
 }
 
 export default NewPostItem

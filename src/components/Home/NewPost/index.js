@@ -52,7 +52,7 @@ const NewPost = () => {
                 timeToRead,
                 fields: { slug },
               },
-            }) => {
+            }, index) => {
 
               return (
                 <NewPostItem 
@@ -67,6 +67,7 @@ const NewPost = () => {
                   image={image}
                   note="note"
                   author={author}
+                  index={index}
                 />
               )
             } 
