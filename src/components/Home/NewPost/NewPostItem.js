@@ -36,7 +36,7 @@ const NewPostItem = ({
 
   let reverse = true
 
-  if (index/2 == 0) {
+  if (index/2 === 0) {
     reverse = false
   }
 

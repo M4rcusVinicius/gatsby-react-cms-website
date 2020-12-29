@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 
 export const PostItemLink = styled(Link)`
   text-decoration: none;
