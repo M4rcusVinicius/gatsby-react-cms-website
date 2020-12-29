@@ -54,14 +54,6 @@ const NewPost = () => {
               },
             }) => {
 
-              let featuredImage = {}
-              
-              if (!image?.childImageSharp?.fluid) {
-                featuredImage = { result: "Imagem não encontrada" }
-              } else {
-                featuredImage = image.childImageSharp.fluid
-              }  
-
               return (
                 <NewPostItem 
                   origin={{class: 'home', filter: null}}
@@ -72,7 +64,7 @@ const NewPost = () => {
                   category={category}
                   subject={subject}
                   timeToRead={timeToRead}
-                  image={featuredImage}
+                  image={image}
                   note="note"
                   author={author}
                 />

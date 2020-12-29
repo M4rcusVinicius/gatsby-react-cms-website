@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Image from './Image' 
+import Image from '../../Image' 
 import * as S from "./styled"
 import * as G from "../../../styles/GlobalComponents"
 
