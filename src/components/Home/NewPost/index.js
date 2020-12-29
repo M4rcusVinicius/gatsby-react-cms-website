@@ -42,7 +42,6 @@ const NewPost = () => {
 
 
   const newPost = data.allMarkdownRemark.edges
-  console.log(newPost)
 
   return (
     <S.NewPostWrapper>

@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import About from "../components/Home/About" 
 import SubjectLinks from "../components/Home/SubjectLinks" 
 import NewPost from "../components/Home/NewPost"
+import PostGroup from "../components/Home/PostGroup"
 
 const HomePage = () => (
   <Layout>
@@ -12,6 +13,9 @@ const HomePage = () => (
     <About />
     <SubjectLinks />
     <NewPost />
+    <PostGroup category="trabalho"/>
+    <PostGroup category="redacao"/>
+    <PostGroup category="resumo"/>
   </Layout>
 )
 
