@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import Image from '../../Image' 
 import * as S from "./styled"
-import * as G from "../../../styles/GlobalComponents"
 
 const NewPostItem = ({
   slug,
@@ -34,20 +33,21 @@ const NewPostItem = ({
     subjectName = subject[0].toUpperCase() + subject.slice(1)
   }  
   
-    return(
-  
+  return(
   <S.NewPostItemWrapper>
-    <S.NewPostItemLink to={slug} state={{origin: origin}} >
+      <S.NewPostItemLink to={slug} state={{origin: origin}} >
 
-      <Image image={image} slug={slug} />
-    
-      <S.NewPostItemInfo>
-        <G.Title>{title}</G.Title>
-        <G.Info>{categoryName} • {subjectName} • {timeToRead} min</G.Info>
-        <S.NewPostItemDescription>{description}</S.NewPostItemDescription>
-      </S.NewPostItemInfo>
 
-    </S.NewPostItemLink>
+        <Image image={image} slug={slug} width="25rem" height="19rem"/>
+      
+        <S.NewPostItemInfoContainer>
+          <S.NewPostItemTitle>{title}</S.NewPostItemTitle>
+          <S.NewPostItemInfo>{categoryName} • {subjectName} • {timeToRead} min</S.NewPostItemInfo>
+          <S.NewPostItemDescription>{description}</S.NewPostItemDescription>
+        </S.NewPostItemInfoContainer>
+        
+
+      </S.NewPostItemLink>
   </S.NewPostItemWrapper>
   )
 }
