@@ -4,12 +4,7 @@ import Img from "gatsby-image"
 
 export const NewPostItemLink = styled(Link)`
   text-decoration: none;
-
-
-  body#grid & {
-    flex-direction: column;
-    justify-content: center;
-  }
+  display: flex;
 `
 
 export const NewPostItemWrapper = styled.section`
@@ -17,15 +12,6 @@ export const NewPostItemWrapper = styled.section`
   padding: 0.5rem;
   box-shadow: 0px 0px 5px var(--light);
   border-radius: 10px;
-
-  body#grid & {
-    flex-direction: column;
-    justify-content: center;
-    max-width: 35rem;
-  }
-  
-  &:hover {
-  }
 `
 
 export const NewPostItemInfo = styled.div`

@@ -31,14 +31,6 @@ const BlogList = props => {
             },
           }) => {
 
-            let featuredImage = {}
-              
-            if (!image?.childImageSharp?.fluid) {
-              featuredImage = { result: "Imagem não encontrada" }
-            } else {
-              featuredImage = image.childImageSharp.fluid
-            }
-
             return (
               <PostItem 
                 origin={{class: 'home', filter: null}}
@@ -49,7 +41,7 @@ const BlogList = props => {
                 category={category}
                 subject={subject}
                 timeToRead={timeToRead}
-                featuredImage={featuredImage}
+                image={image}
                 note="note"
                 author={author}
               />
