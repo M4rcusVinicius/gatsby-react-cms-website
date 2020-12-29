@@ -5,24 +5,6 @@ export const SubjectLinksWrapper = styled.section`
   margin: 4rem 10rem;
 `
 
-export const SubjectLinksBlockquote = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-`
-export const SubjectLinksBlockquoteBorder = styled.div`
-  width: 0.4rem;
-  height: 2.2rem;
-  border-radius: 1rem;
-  background-color: #cee3ff;
-  margin-right: 1rem;
-`
-export const SubjectLinksBlockquoteText = styled.h1`
-  font-weight: 800;
-  font-size: 2rem;
-  color: var(--blueStrDark);
-`
-
 export const SubjectLinksList = styled.ul`
   display: grid;
   grid-area: home;

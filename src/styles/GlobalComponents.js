@@ -37,3 +37,21 @@ export const DisplayFlex = styled.h1`
   display: flex;
   align-items: center;
 `
+
+export const Blockquote = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+`
+export const BlockquoteBorder = styled.div`
+  width: 0.4rem;
+  height: 2.2rem;
+  border-radius: 1rem;
+  background-color: #cee3ff;
+  margin-right: 1rem;
+`
+export const BlockquoteText = styled.h1`
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--blueStrDark);
+`
