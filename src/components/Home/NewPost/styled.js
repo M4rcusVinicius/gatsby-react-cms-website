@@ -8,6 +8,11 @@ export const NewPostWrapper = styled.section`
 
 export const NewPostItemWrapper = styled.div`
   margin: 3rem 0;
+  transition: 200ms;
+
+  &:hover {
+    translate: 2px -4px;
+  }
 `
 
 export const NewPostItemCardContent = styled.div`
@@ -39,6 +44,11 @@ export const NewPostItemLink = styled(Link)`
   border-radius: 10px;
   height: 20rem;
   flex-direction: ${props => props.reverse ? "row-reverse" : "row"};
+  transition: 200ms;
+
+  &:hover {
+    box-shadow: -2px 4px 5px var(--light);
+  }
 `
 
 export const NewPostItemNew = styled.div`
@@ -74,7 +84,7 @@ export const NewPostItemDescription = styled.p`
 
   margin: 1rem 0;
   color: var(--clear);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 `
 

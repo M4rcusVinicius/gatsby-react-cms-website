@@ -30,6 +30,7 @@ export const SubjectLinksLink = styled(Link)`
 
   &:hover {
     translate: 2px -4px;
+    box-shadow: -2px 4px 5px var(--light);
   }
 
 `

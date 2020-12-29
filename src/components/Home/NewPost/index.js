@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import NewPostItem from "./NewPostItem"
 
 import * as S from './styled'
+import * as G from "../../../styles/GlobalComponents"
 
 const NewPost = () => {
   const data = useStaticQuery(graphql`
@@ -45,6 +46,13 @@ const NewPost = () => {
 
   return (
     <S.NewPostWrapper>
+      
+      <G.Blockquote> 
+        <G.BlockquoteBorder />
+        <G.BlockquoteText>Postagens novas</G.BlockquoteText>
+        <G.BlockquoteLink to="page/1">Ver Mais</G.BlockquoteLink>
+      </G.Blockquote>
+
       {newPost.map(
             ({
               node: {

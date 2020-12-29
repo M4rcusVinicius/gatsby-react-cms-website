@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from  'gatsby'
 
 export const FeaturedTitle = styled.h1`
   font-weight: 900;
@@ -54,4 +55,22 @@ export const BlockquoteText = styled.h1`
   font-weight: 800;
   font-size: 2rem;
   color: var(--blueStrDark);
+  
+`
+
+export const BlockquoteLink = styled(Link)`
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--blueStrDark);
+  margin-left: auto;
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  background-color: #cee3ff;
+  border-radius: 10px;
+  transition: 200ms;
+
+  &:hover {
+    translate: 2px -4px;
+    background-color: #bbd8ff;
+  }
 `
