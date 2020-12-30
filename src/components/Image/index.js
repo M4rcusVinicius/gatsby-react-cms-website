@@ -18,9 +18,9 @@ const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, o
   } else {
 
     console.info(`Image not found`)
-    console.info(` => slug: ${slug}`)
-    console.info(` => Image: ${image}`)
-    console.info(` => origin: ${origin}`)
+    console.info(` - slug: ${slug}`)
+    console.info(` - Image: ${image}`)
+    console.info(` - origin: ${origin.class}`)
 
     return(<DefaultFeaturedImage
             height={height}
