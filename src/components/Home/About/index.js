@@ -5,7 +5,7 @@ import AboutImage from "./AboutImage"
 import * as S from "./styled"
 
 const About = () => (
-  <S.AboutWrapper to="/sobre">
+  <S.AboutWrapper>
 
   <S.AboutInfo >
     <S.AboutTitle>Simplesmente Estudante</S.AboutTitle> 

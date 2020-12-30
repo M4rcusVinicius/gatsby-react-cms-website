@@ -121,7 +121,7 @@ const PostGroup = ({category}) => {
     <G.Blockquote> 
       <G.BlockquoteBorder />
       <G.BlockquoteText>{categoryName}</G.BlockquoteText>
-      <G.BlockquoteLink to="page/1">Ver Mais</G.BlockquoteLink>
+      <G.BlockquoteLink to={category}>Ver Mais</G.BlockquoteLink>
     </G.Blockquote>
 
     <S.PostGroupContent>

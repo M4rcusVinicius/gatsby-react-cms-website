@@ -11,8 +11,8 @@ const HomePage = () => (
   <Layout>
     <SEO title="Home" />
     <About />
-    <SubjectLinks />
     <NewPost />
+    <SubjectLinks />
     <PostGroup category="trabalho"/>
     <PostGroup category="redacao"/>
     <PostGroup category="resumo"/>
