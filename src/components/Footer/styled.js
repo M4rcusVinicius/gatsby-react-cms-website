@@ -44,5 +44,11 @@ export const FooterTitle = styled.h3`
   &:hover {
     color: var(--blue);
   }
+`
 
+export const FooterLogo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 `

@@ -1,15 +1,19 @@
 import React from "react"
 
 import links from "./content"
-import Logo from "../NavBar/Logo"
+import Logo from '../Logo'
+import Myself from '../Myself'
 
 import * as S from "./styled"
 
 const Footer = () => (
   <S.FooterWrapper>
     <S.FooterList>
+      <S.FooterLogo>
       <Logo />
+      <Myself />
       <S.FooterText>© 2020, Todos os Direitos Reservados </S.FooterText>
+      </S.FooterLogo>
     </S.FooterList>
     <S.FooterList>
       <S.FooterTitle>Paginas</S.FooterTitle>
