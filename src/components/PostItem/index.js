@@ -39,7 +39,7 @@ const PostItem = ({
   <S.PostItemWrapper>
     <S.PostItemLink to={slug} state={{origin: origin}} >
 
-      <Image image={image} slug={slug} />
+      <Image image={image} slug={slug} origin={origin}/>
     
       <S.PostItemInfo>
         <G.Title>{title}</G.Title>

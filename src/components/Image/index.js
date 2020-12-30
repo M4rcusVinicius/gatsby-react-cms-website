@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import * as S from "./styled"
 
-const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius}) => {
+const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, origin}) => {
 
   if (image?.childImageSharp?.fluid) {
     const featuredImage = image.childImageSharp.fluid
@@ -18,8 +18,9 @@ const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius}) 
   } else {
 
     console.info(`Image not found`)
-    console.info(`slug: ${slug}`)
-    console.info(`Image: ${image}`)
+    console.info(` => slug: ${slug}`)
+    console.info(` => Image: ${image}`)
+    console.info(` => origin: ${origin}`)
 
     return(<DefaultFeaturedImage
             height={height}

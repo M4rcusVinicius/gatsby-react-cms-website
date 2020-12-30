@@ -45,7 +45,7 @@ const NewPostItem = ({
       <S.NewPostItemCardContent reverse={reverse}><S.NewPostItemCard reverse={reverse}>Novo</S.NewPostItemCard></S.NewPostItemCardContent>
       <S.NewPostItemLink to={slug} state={{origin: origin}} reverse={reverse} >  
 
-        <Image image={image} slug={slug} width="25rem" height="19rem"/>
+        <Image image={image} slug={slug} width="25rem" height="19rem" origin={origin}/>
       
         <S.NewPostItemInfoContainer>
           <S.NewPostItemTitle>{title}</S.NewPostItemTitle>
