@@ -16,14 +16,17 @@ export const PostItemWrapper = styled.section`
   padding: 0.5rem;
   box-shadow: 0px 0px 5px var(--light);
   border-radius: 10px;
+  transition: 200ms;
 
+  &:hover {
+    translate: 2px -4px;
+    box-shadow: -2px 4px 5px var(--light);
+  }
+  
   body#grid & {
     flex-direction: column;
     justify-content: center;
     max-width: 35rem;
-  }
-  
-  &:hover {
   }
 `
 
