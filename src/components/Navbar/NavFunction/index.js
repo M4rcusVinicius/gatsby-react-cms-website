@@ -6,6 +6,8 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
 import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
 
+import Identfy from '../Identity'
+
 import * as S from "./styled"
 
 const MenuFunction = () => {
@@ -50,6 +52,10 @@ const MenuFunction = () => {
             <Search />
           </S.MenuFunctionItem>
         </S.MenuFunctionLink>
+
+        <S.MenuFunctionItem>
+          <Identfy />
+        </S.MenuFunctionItem>
 
     </S.MenuFunctionWrapper>
   )
