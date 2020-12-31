@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 import netlifyIdentity from "netlify-identity-widget";
 
+import LoginImage from './LoginImage'
+
 import * as S from './styled'
 
 const Login = () => { 
@@ -21,10 +23,13 @@ const Login = () => {
     }
 
     return(
-      <S.Name>
-        {firstName}
-      </S.Name>
-  )} else {
+      <S.LoginWrapper onClick={() => { netlifyIdentity.open(); }} >
+        <LoginImage />
+        <S.Name>
+          {firstName}
+        </S.Name>
+      </S.LoginWrapper>
+    )} else {
 
     return(
         <S.Button

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const Button = styled.button`
   padding: 0.4rem 1rem;
@@ -31,8 +32,12 @@ export const Name = styled.h1`
   position: relative;
   padding: 0.2rem 0.2rem;
   transition: color 200ms;
+  margin-left: 0.2rem;
+`
 
-  &:hover {
-    color: var(--blue);
-  }
+export const LoginWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
 `
