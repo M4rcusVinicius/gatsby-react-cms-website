@@ -23,3 +23,16 @@ export const Button = styled.button`
     background: var(--blueStrClear);
   }
 `
+export const Name = styled.h1`
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--clear);
+  position: relative;
+  padding: 0.2rem 0.2rem;
+  transition: color 200ms;
+
+  &:hover {
+    color: var(--blue);
+  }
+`

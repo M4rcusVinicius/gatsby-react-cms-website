@@ -10,22 +10,30 @@ const Login = () => {
   })
 
   if (netlifyIdentity.currentUser()) {
-    return(
-      <S.Button
-        onClick={() => { netlifyIdentity.open(); }}
-      >
-        Funciona
-      </S.Button>
-  )
-  }
+    let firstName = ''
 
-  return(
-      <S.Button
-        onClick={() => { netlifyIdentity.open(); }}
-      >
-        Login
-      </S.Button>
-  )
+    try {
+      const fullName = netlifyIdentity.currentUser().user_metadata.full_name.split(" ")
+      firstName = fullName[0]
+    } catch (e) {
+      console.log(e)
+      firstName = "Sem Nome"
+    }
+
+    return(
+      <S.Name>
+        {firstName}
+      </S.Name>
+  )} else {
+
+    return(
+        <S.Button
+          onClick={() => { netlifyIdentity.open(); }}
+        >
+          Login
+        </S.Button>
+    )
+  }
 }
 
 export default Login
