@@ -5,7 +5,7 @@ import netlifyIdentity from "netlify-identity-widget";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const AboutPage = (props) => { 
+const AboutPage = () => { 
   useEffect(() => {
     netlifyIdentity.init({})
   })
@@ -25,7 +25,7 @@ const AboutPage = (props) => {
       </button>
       <button
         onClick={() => {
-          console.log(netlifyIdentity.currentUser())
+          console.log(netlifyIdentity)
         }}
       >
         Current User

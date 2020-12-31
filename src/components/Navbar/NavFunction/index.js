@@ -6,6 +6,8 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
 import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
 
+import Login from '../Login'
+
 import * as S from "./styled"
 
 const MenuFunction = () => {
@@ -25,6 +27,7 @@ const MenuFunction = () => {
 
   return (
     <S.MenuFunctionWrapper>
+      <S.MenuFunctionGroup>
 
         <S.MenuFunctionItem
           title="Mudar o tema"
@@ -51,6 +54,10 @@ const MenuFunction = () => {
           </S.MenuFunctionItem>
         </S.MenuFunctionLink>
 
+      </S.MenuFunctionGroup>
+      
+      <Login />
+    
     </S.MenuFunctionWrapper>
   )
 }

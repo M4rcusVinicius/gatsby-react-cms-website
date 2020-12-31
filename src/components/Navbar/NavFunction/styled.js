@@ -5,6 +5,12 @@ export const MenuFunctionWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+`
+
+export const MenuFunctionGroup = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   width: 8rem;
   justify-content: space-between;
 `
