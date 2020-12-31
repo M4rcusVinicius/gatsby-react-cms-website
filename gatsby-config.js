@@ -35,12 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: `https://simple-studant.netlify.app/` // required!
-      },
-    },
-    {
       resolve: `gatsby-plugin-algolia-search`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,

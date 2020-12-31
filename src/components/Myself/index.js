@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import MyPhoto from './MyPhoto'
 
 import * as S from './styled'
